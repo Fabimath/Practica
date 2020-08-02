@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.5.19)  28 JUL 2020 14:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.5.19)  2 AUG 2020 14:58
 entering extended mode
 **./main.tex
 (main.tex
@@ -1743,8 +1743,10 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 815.
 
 ("C:\Users\chime\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\helvet.sty"
 Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
-))
-No file main.aux.
+)) (main.aux
+LaTeX Info: Redefining \. on input line 26.
+LaTeX Info: Redefining \% on input line 26.
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
@@ -1764,6 +1766,7 @@ LaTeX Font Info:    ... okay on input line 2.
 LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 2.
 LaTeX Font Info:    Trying to load font information for FML+futm on input line 
 2.
+
 ("C:\Users\chime\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\fmlfutm.fd
 "
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
@@ -1842,6 +1845,7 @@ LaTeX Info: Redefining \Ref on input line 520.
 LaTeX Info: Redefining \ref on input line 2.
 LaTeX Info: Redefining \pageref on input line 2.
 LaTeX Info: Redefining \nameref on input line 2.
+ (main.out) (main.out)
 \@outlinefile=\write8
 \openout8 = `main.out'.
 
@@ -1907,7 +1911,52 @@ Package caption Info: End \AtBeginDocument code.
 ("C:\Users\chime\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ucs\ucsencs.def"
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-(Portada.tex) (Desarrollo.tex (semana1/semana1.tex))
+(Portada.tex) (Desarrollo.tex (semana1/semana1.tex
+LaTeX Font Info:    Trying to load font information for FML+futmi on input line
+ 4.
+
+("C:\Users\chime\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\fmlfutmi.f
+d"
+File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
+)
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 4.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 4.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 4.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 4.
+
+
+("C:\Users\chime\AppData\Local\Programs\MiKTeX 2.9\tex/latex/jknappen\ursfs.fd"
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 4.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 4.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+ ("C:\Users\chime\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+ ("C:\Users\chime\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 4.
+
+ ("C:\Users\chime\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ulasy.fd"
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 32.
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <8.3> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 32.
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <6> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 32.
+))
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
 Make it at least 13.59999pt.
@@ -1932,24 +1981,32 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  EEADE3FC04BA8FFFDC76659A1314711A;129.
+(rerunfilecheck)             Before: EEADE3FC04BA8FFFDC76659A1314711A;129
+(rerunfilecheck)             After:  AC1160823750DFC6BEF8EDDF04508D9F;212.
  ) 
 Here is how much of TeX's memory you used:
- 37286 strings out of 480799
- 761294 string characters out of 2895784
- 1168252 words of memory out of 3000000
- 52566 multiletter control sequences out of 15000+200000
- 553944 words of font info for 40 fonts, out of 3000000 for 9000
+ 37516 strings out of 480799
+ 765930 string characters out of 2895784
+ 1173540 words of memory out of 3000000
+ 52740 multiletter control sequences out of 15000+200000
+ 596243 words of font info for 93 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,11n,97p,853b,361s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,11n,97p,853b,1295s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/chime/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
-}<C:/Users/chime/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhv
-b8a.pfb><C:/Users/chime/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helve
-tic/uhvr8a.pfb>
-Output written on main.pdf (1 page, 19943 bytes).
+}<C:/Users/chime/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/f
+ourier-bb.pfb><C:/Users/chime/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/fourier/fourier-mex.pfb><C:/Users/chime/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/fourier/fourier-mlit.pfb><C:/Users/chime/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/chime/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Users/chime/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users
+/chime/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><
+C:/Users/chime/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8
+a.pfb><C:/Users/chime/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helveti
+c/uhvr8a.pfb>
+Output written on main.pdf (1 page, 70526 bytes).
 PDF statistics:
- 26 PDF objects out of 1000 (max. 8388607)
- 4 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 63 PDF objects out of 1000 (max. 8388607)
+ 6 named destinations out of 1000 (max. 500000)
+ 29 words of extra memory for PDF output out of 10000 (max. 10000000)
 
