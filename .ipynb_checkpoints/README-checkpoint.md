@@ -47,6 +47,6 @@ scatter3D(x,y,z,colvar=datos)
 
 Generando la siguiente simulación.
 
-![sim1](sim1.pdf)
+![sim1](simulacion/sim1.pdf)
 
 [Volver al inicio](https://fabimath.github.io/Fabimath/)
