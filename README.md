@@ -3,6 +3,7 @@ Puedes ver mis avances en el informe de practica en el siguiente [enlace](main.p
 
 Además el overleaf de trabajo se encuentra aquí [enlace](https://www.overleaf.com/9226984625zkchnzwjnkcr)
 
+Otro papaer lo puedes encontrar [aquí](semana2/paper.pdf)
 ## Simulación en esferas
 
 Con las siguientes lineas de código se genera una simulación en una esfera.
