@@ -17,7 +17,7 @@ También se sabe que sus densidades espectrales vienen dadas por:
 $$
 f_{kl}(\omega) = \parcurvo{2\pi}^{-1/2}\int_{\R{}} C_{kl}(h)\exp\parllave{- i \omega h} dh
 $$
-\begin{defi}{Coherencia de Series de tiempo}
+\begin{defi*}{Coherencia de Series de tiempo}
 Se define la función de coherencia cuadratica entre dos series de tiempos dependiente de una frecuencia $\omega$ a la función:
 $$
 \gamma^2(\omega) = \dfrac{
@@ -27,6 +27,37 @@ f_{11}(\omega) f_{22}(\omega)
 }
 $$
 Esta función puede interpretarse como una cuantificación de la relación lineal entre dos series de tiempo a una frecuencia $\omega$.
-\end{defi}
+\end{defi*}
 \subsection{Coherencia en campos aleatorios}
-Sea el campo aleatorio complejo dado por $\bf{Z}\parcurvo{\bf{s}} = \parcurvo{ Z_1(\bf{s})}$
+Sea el campo aleatorio complejo dado por $\bf{Z}\parcurvo{\bf{s}} = \parcurvo{ Z_1(\bf{s}),...,Z_p(\bf{s})}$ debilmente estacionario y de media $\bf{0}$, con matriz de covarianza $\bf{C}(\bf{h})$=$\parcurvo{
+C_{ij}(\bf{h})
+}^p_{i,j=1}$.\\
+\\
+\textbf{Observación:} Recordemos que proceso estacionario complejo se tiene que $\cov{Z_i(s)_1,Z_j(s)_2)} = \esperanza{Z_i(s_1)\barra{Z_j(s_2)}}$, tal que se tenga que $C_{i,j}(\bf{h})$=$\barra{C_{j,i}(\bf{h})}$.\\
+\\
+\begin{teo*}{}
+$\bf{C}$ es semi-definida positiva si y sólo si:
+$$
+C_{i j}(\mathbf{h})=\int_{\mathbb{R}^{d}} \exp \left(i \omega^{\mathrm{T}} \mathbf{h}\right) f_{i j}(\omega) \mathrm{d} \boldsymbol{\omega}
+$$
+Además $\bf{C}$ es semi-definida positiva si y sólo si la matriz $\mathrm{f}(\omega)=\left(f_{i j}(\omega)\right)_{i, j=1}^{p}$ es semi-definida positva donde $f$ es la densidad espectral la cual cumple que $f_{i j}(\omega)=\overline{f_{j i}(\omega)}$ y:
+$$
+f_{i j}(\omega)=\frac{1}{(2 \pi)^{d/2}} \int_{\mathbb{R}^{d}} \exp \left(-i \omega^{\mathrm{T}} \mathbf{h}\right) C_{i j}(\mathbf{h}) \mathrm{dh}
+$$
+\end{teo*}
+La idea a partir de ahora sera trabajar este concepto en el plano con la finalidad de mapear las ideas a la esfera.\\
+\\
+Sea $\left(Z_{1}(\mathrm{s}), Z_{2}(\mathrm{s})\right)^{\mathrm{T}}$ un campo aleatorio complejo de media 0 y débilmente estacionario. Con matriz de covarianza  $\bf{C}(\bf{h})$ que admita una matriz de densidad espectral $\bf{f}(\omega)=\left(f_{i j}(\omega)\right)_{i, j=1}^{2}$.\\
+\\
+Para realizar predicciones en un punto $s_0$ tenemos que el funcional que minimiza el error cuadratico medio $\displaystyle \mathbb{E}\left|\left(Z_{1}\left(\mathrm{s}_{0}\right)-\int_{\mathbb{R}^{d}} K\left(\mathbf{u}-\mathbf{s}_{0}\right) Z_{2}(\mathbf{u}) \mathrm{d} \mathbf{u}\right)^2\right|$ viene dado por:
+$$
+K(\mathbf{u})=\frac{1}{(2 \pi)^{d}} \int_{\mathbb{R}^{d}} \exp \left(-i \boldsymbol{\omega}^{\mathrm{T}} \mathbf{u}\right) \frac{f_{12}(\boldsymbol{\omega})}{f_{22}(\boldsymbol{\omega})} \mathrm{d} \boldsymbol{\omega}=\frac{1}{(2 \pi)^{d}} \int_{\mathbf{R}^{d}} \exp \left(-i \boldsymbol{\omega}^{\mathrm{T}} \mathbf{u}\right) \sqrt{\frac{f_{11}(\boldsymbol{\omega})}{f_{22}(\boldsymbol{\omega})}} \gamma(\boldsymbol{\omega}) \mathrm{d} \boldsymbol{\omega}
+$$
+Adicionalmente tenemos que $\displaystyle \hat{Z}_{1}\left(s_{0}\right)=\int_{\mathbb{R}^{d}} K\left(\mathbf{u}-\mathbf{s}_{0}\right) Z_{2}(\mathbf{u}) \mathrm{d} \mathbf{u}$ y la densidad espectral del estimador viene dada por:
+$$
+f_{1 \mid 2}(\boldsymbol{\omega})=f_{11}(\boldsymbol{\omega})|\gamma(\boldsymbol{\omega})|^{2}
+$$
+Obteniendo el siguiente resultado:
+$$
+|\gamma(\boldsymbol{\omega})|^{2}=\frac{f_{1 \mid 2}(\boldsymbol{\omega})}{f_{11}(\boldsymbol{\omega})}
+$$
