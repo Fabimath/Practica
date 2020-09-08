@@ -13,44 +13,47 @@ Con las siguientes lineas de código se genera una simulación en una esfera.
 
 ~~~
 library("plot3D")
+library("gsl")
 
-grid_size = 100;
+nlon = 600;    # number of longitude points
+nlat = 600;    # number of latitude points
 
-eps = 0.01;
-theta = seq(0+eps,pi-eps,l=grid_size);
-phi = seq(0,2*pi-eps,l=grid_size);
-coord = expand.grid(phi,theta);
+phi = seq(0,2*pi,length=nlon);
+theta = seq(0,pi,length=nlat);
+
+coord = expand.grid(phi,theta);  
 x = sin(coord[,2])*cos(coord[,1]);
 y = sin(coord[,2])*sin(coord[,1]);
 z = cos(coord[,2]);
-nsites = length(x);
-val = 0.99999999999;
-escala = 1;
-mat = array(dim=c(nsites,nsites));
+num = length(x);
+print(num);  
 
-cova <- function(escala,geod){
-  res = exp(-3*geod/escala);
-  return(res)    
+Ntrunc = 50;     # Number of terms in the expansion
+suma = array(dim=c(num,1),0);
+for(n in 0:Ntrunc){
+ 
+  bn = 1/(n^2+0.1);  #power spectrum
+  print(n)
+  fact = sqrt(bn) ; 
+
+  suma  <-  suma  +  fact*rnorm(1,0,1)*legendre_sphPlm(n,0,cos(coord[,2]))  ;
+  
+     if(n>0){
+        for(j in 1:n){
+           ynm = legendre_sphPlm(n,j,cos(coord[,2])) * ( rnorm(1,0,sd=1) * cos(j*coord[,1]) +
+                                                         rnorm(1,0,sd=1) * sin(j*coord[,1])  );
+           suma <- suma +  fact*sqrt(2)* ynm;
+        }
+     }
 }
 
-for(i in 1:nsites){
-  for(j in 1:nsites){
-    prod = x[i]*x[j]+y[i]*y[j]+z[i]*z[j];
-    if(prod > val){dij = 0;}
-    if(prod < -val){dij = pi;}
-    if(prod <= val & prod >= -val){dij = acos(prod);}
-    mat[i,j] = cova(escala,dij);          
-  }
-}
-
-set.seed(0)
-datos = t(chol(mat))%*%rnorm(nsites);
-
-scatter3D(x,y,z,colvar=datos)
+svg("esfera.svg")
+scatter3D(x,y,z,colvar=suma,theta=0,phi=0,box=F);  # realization plot
+dev.off()
 ~~~
 
 Generando la siguiente simulación.
 
-![sim1](simulacion/sim1.pdf)
+![sim1](semana3/esfera.svd)
 
 [Volver al inicio](https://fabimath.github.io/Fabimath/)
