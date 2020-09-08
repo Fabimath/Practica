@@ -11,6 +11,7 @@ Un paper mas sobre esferas [aquí](https://arxiv.org/pdf/1111.7077.pdf)
 
 Con las siguientes lineas de código se genera una simulación en una esfera.
 
+![wo](semana3/esferasimulada.ipynb)
 ~~~
 library("plot3D")
 library("gsl")
