@@ -11,6 +11,6 @@ Un paper mas sobre esferas [aquí](https://arxiv.org/pdf/1111.7077.pdf)
 
 Con las siguientes lineas de código se genera una simulación en una esfera.
 
-[Códigos](semana3/esferasimulada.ipynb)
+[Códigos](https://github.com/Fabimath/Practica/blob/master/semana3/esferasimulada.ipynb)
 
 [Volver al inicio](https://fabimath.github.io/Fabimath/)
